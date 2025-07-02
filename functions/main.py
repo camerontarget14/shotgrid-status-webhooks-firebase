@@ -1,4 +1,4 @@
-"""Baked Studios • ShotGrid webhooks – Firebase Cloud Functions
+"""• ShotGrid webhooks – Firebase Cloud Functions
 ----------------------------------------------------------------
 Exports three HTTP Cloud Functions that preserve legacy URLs while sharing a
 single implementation.
@@ -20,8 +20,8 @@ from firebase_functions import https_fn  # GCF/Firebase runtime
 from flask import Request, abort, make_response, jsonify
 
 # ─────────────────────────────── Standard Python Logging ────────────────────────
-# Set up a logger with a name that works well in Firebase Functions
-logger = logging.getLogger("baked-shotgrid-webhooks")
+# Set up a logger with a name in Firebase Functions
+logger = logging.getLogger("shotgrid-webhooks")
 
 # Configure the logger
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
