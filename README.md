@@ -1,4 +1,4 @@
-# baked-webhooks-firebase
+# shotgrid-webhooks-firebase
 
 🚀 Ported Webhooks application from @sinclairtarget who did the original work for hosting on a windows machine on prem.
 
