@@ -1,0 +1,31 @@
+{
+  "functions": {
+    "source": "functions",
+    "codebase": "default",
+    "runtime": "python310",
+    "ignore": [
+      "venv",
+      ".git",
+      "firebase-debug.log",
+      "firebase-debug.*.log",
+      "__pycache__",
+      "*.pyc"
+    ]
+  },
+  "hosting": {
+    "rewrites": [
+      {
+        "source": "/webhooks/status/task",
+        "function": "task_webhook"
+      },
+      {
+        "source": "/webhooks/status/version",
+        "function": "version_webhook"
+      },
+      {
+        "source": "/webhooks/status/version-created",
+        "function": "version_created_webhook"
+      }
+    ]
+  }
+}

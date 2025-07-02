@@ -1,0 +1,7 @@
+firebase_functions~=0.1.0
+firebase-admin>=6.0.0
+Flask>=2.0.0
+pydantic>=1.8.0
+PyYAML>=6.0
+requests>=2.25.0
+shotgun_api3

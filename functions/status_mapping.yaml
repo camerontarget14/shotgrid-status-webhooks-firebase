@@ -1,0 +1,175 @@
+# EDIT ME! This is the list of mappings for statuses you can follow the formatting for. It uses Status short codes as well as labels.
+
+version_statuses:
+  - key: na
+    label: N/A
+  - key: cnv
+    label: Check New Version
+  - key: bkdn
+    label: BKD Note
+  - key: stcomp
+    label: Step Completed
+  - key: sndwip
+    label: Send WIP
+  - key: sndv0
+    label: Send v000
+  - key: sndcli
+    label: Sent to Client
+  - key: rqc
+    label: Readyfor QC
+  - key: qckbk
+    label: QC Kickback
+  - key: rev
+    label: Pending Client Review
+  - key: note
+    label: Client Note
+  - key: hero
+    label: Hero Shot
+  - key: apv
+    label: Client Approved
+  - key: pdrr
+    label: Pending Second Review
+
+task_statuses:
+  - key: omt
+    label: Omit
+  - key: hld
+    label: On Hold
+  - key: wtg
+    label: Waiting to Start
+  - key: rdy
+    label: Ready to Start
+  - key: per
+    label: Pull Error
+  - key: ip
+    label: In Progress
+  - key: ncl
+    label: Needs Clarification
+  - key: nwmdia
+    label: New Media
+  - key: ndrp
+    label: Needs Prep
+  - key: reqapv
+    label: Prep Request Approved
+  - key: ofr
+    label: Out For Prep
+  - key: bfr
+    label: Back From Prep
+  - key: cnv
+    label: Check New Version
+  - key: adn
+    label: Address New Notes
+  - key: stcomp
+    label: Step Completed
+  - key: sndcli
+    label: Send to Client
+  - key: qckbk
+    label: QC Kickback
+  - key: rev
+    label: Pending Client Review
+  - key: apv
+    label: Client Approved
+  - key: di
+    label: Delivered to DI
+
+shot_statuses:
+  - key: omt
+    label: Omit
+  - key: bid
+    label: Bidding
+  - key: hld
+    label: On Hold
+  - key: repull
+    label: Re-Pull
+  - key: media
+    label: Awaiting Media
+  - key: awa
+    label: Awaiting Assignment
+  - key: actv
+    label: Active
+  - key: rev
+    label: Pending Client Review
+  - key: apv
+    label: Client Approved
+  - key: di
+    label: Delivered to DI
+  - key: final
+    label: Final
+
+version_to_task:
+  cnv:
+    - cnv
+  bkdn:
+    - adn
+  stcomp:
+    - stcomp
+  sndwip:
+    - sndcli
+  sndv0:
+    - sndcli
+  sndcli:
+    - sndcli
+  qckbk:
+    - qckbk
+  rev:
+    - rev
+  note:
+    - adn
+  hero:
+    - apv
+  apv:
+    - apv
+  pdrr:
+    - rev
+
+task_to_shot:
+  omt:
+    - omt
+  hld:
+    - hld
+  rdy:
+    - actv
+  per:
+    - actv
+  ip:
+    - actv
+  ncl:
+    - actv
+  ofr:
+    - actv
+  bfr:
+    - actv
+  cnv:
+    - actv
+  stcomp:
+    - actv
+  sndcli:
+    - actv
+  adn:
+    - actv
+  qckbk:
+    - actv
+  rev:
+    - rev
+  apv:
+    - apv
+  di:
+    - di
+
+shot_to_task:
+  omt:
+    - omt
+
+task_step_relations:
+  Rotoscoping:
+    triggers_on_status: stcomp
+    update_steps:
+      - Composite
+      - Secondary Composite
+    new_status: bfr
+  Paint:
+    triggers_on_status: stcomp
+    update_steps:
+      - Composite
+      - Secondary Composite
+    new_status: bfr
