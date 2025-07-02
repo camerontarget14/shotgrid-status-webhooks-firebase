@@ -33,9 +33,17 @@ Get to the right place:
 ```
 cd functions
 ```
+Create environment:
+```
+python -m venv .venv
+```
 Activate environment:
 ```
-. venv/bin/activate
+.venv/bin/activate
+```
+Grab those dependencies:
+```
+pip install -r requirements.txt
 ```
 Deploy:
 ```
