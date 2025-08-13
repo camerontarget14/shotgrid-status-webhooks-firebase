@@ -2,7 +2,7 @@
 
 🚀 Ported Webhooks application from @sinclairtarget who did the original work for hosting on a windows machine on prem.
 
-Functions are hosted on firebase and endpoints can be reachable by setting up ShotGrid's webhooks workflow.
+Functions are hosted on firebase and endpoints can be reachable by setting up [ShotGrid's webhooks workflow](https://help.autodesk.com/view/SGDEV/ENU/?guid=SGD_we_webook_guides_html).
 
 Firebase Docs: https://firebase.google.com/docs/cli
 
